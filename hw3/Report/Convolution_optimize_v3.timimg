@@ -1,0 +1,73 @@
+Error: Unit conflict found: Constraint time unit is 'ns'; main library time unit is 'ps'. (IFS-001)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Convolution_optimize_v3
+Version: T-2022.03
+Date   : Thu Nov  9 00:02:28 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_INVBUF_RVT_TT_08302018
+Wire Load Model Mode: top
+
+  Startpoint: IFM_Buffer_reg[8][15]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage1_Buffer_reg[4][24]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IFM_Buffer_reg[8][15]/CLK (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00       0.00 r
+  IFM_Buffer_reg[8][15]/QN (ASYNC_DFFHx1_ASAP7_75t_R)    56.75      56.75 r
+  mult_168/a[15] (Convolution_optimize_v3_DW_mult_uns_21)
+                                                          0.00      56.75 r
+  mult_168/U1437/Y (HB1xp67_ASAP7_75t_R)                 25.64      82.39 r
+  mult_168/U1436/Y (XOR2xp5_ASAP7_75t_R)                 28.40     110.79 r
+  mult_168/U1549/Y (AND2x4_ASAP7_75t_R)                  28.00     138.79 r
+  mult_168/U1587/Y (NAND2xp5_ASAP7_75t_R)                 9.79     148.58 f
+  mult_168/U1714/Y (NAND2xp5_ASAP7_75t_R)                18.60     167.19 r
+  mult_168/U538/SN (FAx1_ASAP7_75t_R)                    57.76     224.94 f
+  mult_168/U535/CON (FAx1_ASAP7_75t_R)                   36.25     261.19 r
+  mult_168/U526/SN (FAx1_ASAP7_75t_R)                    43.20     304.39 f
+  mult_168/U1810/Y (INVxp67_ASAP7_75t_R)                 13.61     318.00 r
+  mult_168/U1811/Y (INVx1_ASAP7_75t_R)                   10.81     328.81 f
+  mult_168/U524/SN (FAx1_ASAP7_75t_R)                    32.48     361.30 r
+  mult_168/U1705/Y (BUFx2_ASAP7_75t_R)                   24.09     385.39 r
+  mult_168/U1665/Y (NOR2x1_ASAP7_75t_R)                  10.33     395.71 f
+  mult_168/U1945/Y (NOR2xp33_ASAP7_75t_R)                24.82     420.53 r
+  mult_168/U1931/Y (NAND2xp5_ASAP7_75t_R)                15.32     435.86 f
+  mult_168/U1875/Y (BUFx3_ASAP7_75t_R)                   23.46     459.31 f
+  mult_168/U2174/Y (OR2x2_ASAP7_75t_R)                   22.92     482.23 f
+  mult_168/U2173/Y (NOR2x1_ASAP7_75t_R)                  11.49     493.72 r
+  mult_168/U2146/Y (NOR2x1_ASAP7_75t_R)                  10.31     504.02 f
+  mult_168/U2195/Y (XNOR2xp5_ASAP7_75t_R)                19.76     523.78 f
+  mult_168/product[24] (Convolution_optimize_v3_DW_mult_uns_21)
+                                                          0.00     523.78 f
+  U3184/Y (INVxp67_ASAP7_75t_R)                           9.37     533.16 r
+  stage1_Buffer_reg[4][24]/D (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00     533.16 r
+  data arrival time                                                533.16
+
+  clock clk (rise edge)                                 550.00     550.00
+  clock network delay (ideal)                             0.00     550.00
+  stage1_Buffer_reg[4][24]/CLK (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00     550.00 r
+  library setup time                                    -16.84     533.16
+  data required time                                               533.16
+  --------------------------------------------------------------------------
+  data required time                                               533.16
+  data arrival time                                               -533.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

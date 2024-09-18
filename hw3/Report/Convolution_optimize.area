@@ -1,0 +1,35 @@
+Warning: Design 'Convolution_optimize' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Convolution_optimize
+Version: T-2022.03
+Date   : Wed Nov  8 23:35:13 2023
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_RVT_TT_08302018 (File: /RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_INVBUF_RVT_TT_08302018.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_08302018 (File: /RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SIMPLE_RVT_TT_08302018.db)
+    asap7sc7p5t_SEQ_RVT_TT_08302018 (File: /RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SEQ_RVT_TT_08302018.db)
+
+Number of ports:                          663
+Number of nets:                         23548
+Number of cells:                        21648
+Number of combinational cells:          20190
+Number of sequential cells:              1448
+Number of macros/black boxes:               0
+Number of buf/inv:                       2851
+Number of references:                      40
+
+Combinational area:              24190.202935
+Buf/Inv area:                     2206.128983
+Noncombinational area:            8734.003143
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 32924.206079
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

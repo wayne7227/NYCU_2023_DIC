@@ -1,0 +1,64 @@
+s1(08Nov2023:01:04:44):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s2(08Nov2023:01:06:41):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s3(08Nov2023:01:07:33):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s4(08Nov2023:01:10:31):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s5(08Nov2023:01:13:09):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s6(08Nov2023:01:25:54):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s7(08Nov2023:01:42:18):  irun TESTBED.v -define RTL -debug - notimingchecks 
+s8(08Nov2023:01:43:00):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s9(08Nov2023:01:43:34):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s10(08Nov2023:01:57:04):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s11(08Nov2023:01:58:06):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s12(08Nov2023:02:03:28):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s13(08Nov2023:02:04:56):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s14(08Nov2023:02:15:58):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s15(08Nov2023:02:24:46):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s16(08Nov2023:02:38:45):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s17(08Nov2023:02:39:12):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s18(08Nov2023:02:39:29):  irun TESTBED_Adder_4bit.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s19(08Nov2023:02:39:42):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s20(08Nov2023:02:51:37):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s21(08Nov2023:02:54:47):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s22(08Nov2023:03:09:01):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s23(08Nov2023:03:11:28):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s24(08Nov2023:03:14:02):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s25(08Nov2023:03:21:50):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s26(08Nov2023:03:22:11):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s27(08Nov2023:03:22:53):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s28(08Nov2023:03:25:29):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s29(08Nov2023:19:37:27):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s30(08Nov2023:19:38:05):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s31(08Nov2023:19:43:24):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s32(08Nov2023:19:56:59):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s33(08Nov2023:20:07:25):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s34(08Nov2023:20:10:59):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s35(08Nov2023:20:51:06):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s36(08Nov2023:20:51:56):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s37(08Nov2023:20:52:14):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s38(08Nov2023:20:58:30):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s39(08Nov2023:21:00:10):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s40(08Nov2023:21:17:42):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s41(08Nov2023:21:18:29):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s42(08Nov2023:21:20:11):  irun TESTBED_Adder_4bit.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s43(08Nov2023:21:20:29):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s44(08Nov2023:21:23:28):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s45(08Nov2023:21:30:01):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s46(08Nov2023:21:31:41):  irun TESTBED.v -define GATE -debug -v ./asap7sc7p5t_SIMPLE_RVT_TT_08302018.v ./asap7sc7p5t_SEQ_RVT_TT_08302018.v ./asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch 
+s47(08Nov2023:21:56:28):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s48(08Nov2023:22:10:10):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s49(08Nov2023:22:24:22):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s50(08Nov2023:22:27:37):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s51(08Nov2023:22:35:08):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s52(08Nov2023:22:37:20):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s53(08Nov2023:22:40:17):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s54(08Nov2023:22:41:44):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s55(08Nov2023:22:48:29):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s56(08Nov2023:22:52:11):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s57(08Nov2023:23:02:34):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s58(08Nov2023:23:04:10):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s59(08Nov2023:23:07:19):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s60(08Nov2023:23:09:57):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s61(08Nov2023:23:23:49):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s62(08Nov2023:23:25:55):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s63(09Nov2023:00:00:06):  irun TESTBED.v -define RTL -debug -notimingchecks 
+s64(09Nov2023:00:00:20):  irun TESTBED.v -define RTL -debug -notimingchecks 

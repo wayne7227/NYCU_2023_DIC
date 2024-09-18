@@ -1,0 +1,3 @@
+Command Line: /usr/cad/synopsys/verdi/2019.06/platform/LINUXAMD64/bin/Novas -nWave
+uname(Linux ee27 3.10.0-1160.88.1.el7.x86_64 #1 SMP Tue Mar 7 15:41:52 UTC 2023 x86_64)
+au time 54.291207 3.110693 1.246394 delta 316837888 316837888 total 751890432 751890432

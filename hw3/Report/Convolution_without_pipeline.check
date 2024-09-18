@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Wed Nov  8 20:11:46 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
+--------------------------------------------------------------------------------
+
+Warning: In design 'Convolution_without_pipeline', cell 'C6263' does not drive any nets. (LINT-1)
+Warning: In design 'Convolution_without_pipeline', cell 'C6266' does not drive any nets. (LINT-1)
+Warning: In design 'Convolution_without_pipeline', cell 'C6607' does not drive any nets. (LINT-1)
+Warning: In design 'Convolution_without_pipeline', cell 'C6611' does not drive any nets. (LINT-1)
+Warning: In design 'Convolution_without_pipeline', cell 'C6615' does not drive any nets. (LINT-1)
+Warning: In design 'Convolution_without_pipeline', cell 'C6619' does not drive any nets. (LINT-1)
+1
