@@ -1,0 +1,857 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path { 
+       ./ \
+       /home/RAID2/COURSE/dic/dic122/hw3 }
+ 
+       ./  /home/RAID2/COURSE/dic/dic122/hw3 
+set link_library {dw_foundation.sldb }
+dw_foundation.sldb 
+set synthetic_library {dw_foundation.sldb asap7sc7p5t_AO_RVT_TT_08302018.db asap7sc7p5t_OA_RVT_TT_08302018.db asap7sc7p5t_INVBUF_RVT_TT_08302018.db asap7sc7p5t_SEQ_RVT_TT_08302018.db asap7sc7p5t_SIMPLE_RVT_TT_08302018.db asap7sc7p5t_AO_RVT_TT_08302018.db  asap7sc7p5t_OA_RVT_TT_08302018.db}
+dw_foundation.sldb asap7sc7p5t_AO_RVT_TT_08302018.db asap7sc7p5t_OA_RVT_TT_08302018.db asap7sc7p5t_INVBUF_RVT_TT_08302018.db asap7sc7p5t_SEQ_RVT_TT_08302018.db asap7sc7p5t_SIMPLE_RVT_TT_08302018.db asap7sc7p5t_AO_RVT_TT_08302018.db  asap7sc7p5t_OA_RVT_TT_08302018.db
+set target_library {asap7sc7p5t_INVBUF_RVT_TT_08302018.db asap7sc7p5t_SIMPLE_RVT_TT_08302018.db asap7sc7p5t_SEQ_RVT_TT_08302018.db }         
+asap7sc7p5t_INVBUF_RVT_TT_08302018.db asap7sc7p5t_SIMPLE_RVT_TT_08302018.db asap7sc7p5t_SEQ_RVT_TT_08302018.db 
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "Convolution_optimize_v3"
+Convolution_optimize_v3
+set clk_period 550
+550
+# the unit of the clk period  in here is ps 
+set IN_DLY  [expr 0.5*$clk_period]
+275.0
+set OUT_DLY [expr 0.5*$clk_period]
+275.0
+#set hdlin_ff_always_sync_set_reset true
+#======================================================
+#  Read RTL Code
+#======================================================
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./Convolution_optimize_v3.v
+Presto compilation completed successfully.
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine Convolution_optimize_v3 line 36 in file
+		'./Convolution_optimize_v3.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  Weight_Buffer_reg  | Flip-flop |  144  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Convolution_optimize_v3 line 44 in file
+		'./Convolution_optimize_v3.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   IFM_Buffer_reg    | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+|   IFM_Buffer_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Convolution_optimize_v3 line 70 in file
+		'./Convolution_optimize_v3.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Convolution_optimize_v3 line 78 in file
+		'./Convolution_optimize_v3.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Convolution_optimize_v3 line 147 in file
+		'./Convolution_optimize_v3.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Out_OFM_reg     | Flip-flop |  36   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  stage1_Buffer_reg  | Flip-flop |  324  |  Y  | N  | Y  | N  | N  | N  | N  |
+|  stage2_Buffer_reg  | Flip-flop |  108  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Convolution_optimize_v3)
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_AO_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_OA_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_INVBUF_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SEQ_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SIMPLE_RVT_TT_08302018.db'
+Elaborated 1 design.
+Current design is now 'Convolution_optimize_v3'.
+Information: Building the design 'CLA_36bit'. (HDL-193)
+Presto compilation completed successfully. (CLA_36bit)
+1
+#======================================================
+#  Global Setting
+#======================================================
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $clk_period clk
+1
+set_ideal_network -no_propagate clk
+1
+set_input_delay  $IN_DLY -clock clk [all_inputs]
+1
+set_output_delay $OUT_DLY  -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+#set_max_fanout 10 [all_inputs]
+#set_dont_use slow/JKFF*
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+Information: Uniquified 8 instances of design 'CLA_36bit'. (OPT-1056)
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_hold [all_clocks]
+1
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+| asap7sc7p5t_AO_RVT_TT_08302018     | 1.0                     |           |
+| asap7sc7p5t_OA_RVT_TT_08302018     | 1.0                     |           |
+| asap7sc7p5t_INVBUF_RVT_TT_08302018 | 1.0                     |           |
+| asap7sc7p5t_SEQ_RVT_TT_08302018    | 1.0                     |           |
+| asap7sc7p5t_SIMPLE_RVT_TT_08302018 | 1.0                     |           |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2463                                   |
+| Number of User Hierarchies                              | 8                                      |
+| Sequential Cell Count                                   | 892                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 21                                     |
+| Number of Dont Touch nets                               | 1                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+  Loading target library 'asap7sc7p5t_INVBUF_RVT_TT_08302018'
+  Loading target library 'asap7sc7p5t_SIMPLE_RVT_TT_08302018'
+  Loading target library 'asap7sc7p5t_SEQ_RVT_TT_08302018'
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'CLA_36bit_0'
+  Processing 'Convolution_optimize_v3'
+Information: The register 'stage1_Buffer_reg[0][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[0][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[0][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[0][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[1][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[1][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[1][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[1][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[2][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[2][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[2][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[2][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[3][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[3][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[3][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[3][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[4][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[4][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[4][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[4][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[5][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[5][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[5][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[5][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[6][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[6][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[6][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[6][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[7][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[7][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[7][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[7][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[8][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[8][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[8][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage1_Buffer_reg[8][32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage2_Buffer_reg[0][35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage2_Buffer_reg[0][34]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage2_Buffer_reg[0][33]' is a constant and will be removed. (OPT-1206)
+Information: The register 'stage2_Buffer_reg[0][32]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'Convolution_optimize_v3_DW_cmp_0'
+  Processing 'Convolution_optimize_v3_DW01_inc_0'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_0'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_1'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_2'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_3'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_4'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_5'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_6'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_7'
+  Mapping 'Convolution_optimize_v3_DW_mult_uns_8'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'Convolution_optimize_v3'. (DDB-72)
+LNC WARNING: Found output_to_output lib arc on HAxp5_ASAP7_75t_R.
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:18   30740.2     70.49   10002.9       0.0                                0.00  
+    0:00:18   30659.8     70.49   10002.9     203.8                                0.00  
+    0:00:18   30659.8     70.49   10002.9     203.8                                0.00  
+    0:00:18   30659.8     70.49   10002.9     203.8                                0.00  
+    0:00:18   30659.8     70.49   10002.9     203.8                                0.00  
+    0:00:21   26291.4    174.93   15337.9     177.6                                0.00  
+    0:00:22   26740.9    100.38   10793.7     177.6                                0.00  
+    0:00:22   26703.1     80.70    9375.8     177.6                                0.00  
+    0:00:22   26739.7     79.32    9250.4     177.6                                0.00  
+    0:00:22   26734.8     77.02    9270.9     177.6                                0.00  
+    0:00:23   26743.5     75.24    8829.1     177.6                                0.00  
+    0:00:23   26746.7     77.99    8881.0     177.6                                0.00  
+    0:00:23   26744.9     73.99    8663.5     177.6                                0.00  
+    0:00:23   26758.8     77.64    8697.9     177.6                                0.00  
+    0:00:23   26762.6     94.14    8816.3     177.6                                0.00  
+    0:00:23   26762.8     78.31    8665.7     177.6                                0.00  
+    0:00:23   26764.0     72.02    8352.3     177.6                                0.00  
+    0:00:23   26777.3     66.51    7942.9     177.6                                0.00  
+    0:00:24   26782.9     63.44    7716.0     177.6                                0.00  
+    0:00:24   26788.0     61.66    7651.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:24   26788.7     61.66    7649.5     177.6                                0.00  
+    0:00:24   26808.1     53.49    6985.4     177.6 stage1_Buffer_reg[0][23]/D      0.00  
+    0:00:24   26818.8     51.57    6786.6     177.6 stage1_Buffer_reg[5][22]/D      0.00  
+    0:00:24   26826.5     50.02    6572.7     177.6 stage1_Buffer_reg[2][28]/D      0.00  
+    0:00:24   26843.3     49.17    6508.7     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:25   26857.3     47.78    6328.9     177.6 stage1_Buffer_reg[2][20]/D      0.00  
+    0:00:25   26863.6     47.43    6286.4     177.6 stage1_Buffer_reg[2][24]/D      0.00  
+    0:00:25   26865.7     47.00    6246.0     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:25   26878.8     46.62    6186.5     177.6 stage2_Buffer_reg[1][33]/D      0.00  
+    0:00:25   26886.9     46.27    6141.9     177.6 stage1_Buffer_reg[5][22]/D      0.00  
+    0:00:25   26887.6     45.91    6063.6     177.6 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:25   26893.2     45.48    5926.8     177.6 stage1_Buffer_reg[3][25]/D      0.00  
+    0:00:25   26904.2     44.80    5857.1     177.6 stage1_Buffer_reg[5][22]/D      0.00  
+    0:00:25   26913.5     44.44    5803.0     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:25   26922.1     43.91    5774.3     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:25   26937.1     43.33    5711.5     177.6 stage1_Buffer_reg[3][25]/D      0.00  
+    0:00:25   26948.5     42.60    5548.3     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:25   26957.4     42.10    5489.4     177.6 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:26   26960.9     41.74    5445.8     177.6 stage1_Buffer_reg[0][20]/D      0.00  
+    0:00:26   26964.8     41.20    5389.0     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:26   26970.9     40.71    5327.8     177.6 stage1_Buffer_reg[5][20]/D      0.00  
+    0:00:26   26982.3     40.28    5226.9     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:26   26989.6     39.91    5157.4     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:26   27003.6     39.16    5082.0     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:26   27007.5     39.04    5054.9     177.6 stage1_Buffer_reg[5][20]/D      0.00  
+    0:00:26   27007.8     38.95    5035.6     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:26   27008.2     38.83    4997.5     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:26   27020.1     38.21    4924.3     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:26   27032.3     37.94    4891.3     177.6 stage1_Buffer_reg[5][25]/D      0.00  
+    0:00:26   27033.0     37.79    4874.1     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:26   27041.1     37.62    4821.7     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:27   27052.1     37.40    4768.1     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:27   27056.7     37.08    4744.7     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:27   27065.1     36.85    4716.8     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:27   27070.0     36.69    4699.3     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:27   27073.8     36.48    4662.0     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:27   27077.5     36.16    4623.8     177.6 stage2_Buffer_reg[2][27]/D      0.00  
+    0:00:27   27089.4     35.91    4608.4     177.6 stage1_Buffer_reg[0][26]/D      0.00  
+    0:00:27   27095.2     35.39    4528.0     177.6 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:27   27100.4     35.14    4502.9     177.6 stage1_Buffer_reg[2][24]/D      0.00  
+    0:00:27   27104.8     34.87    4443.7     177.6 stage1_Buffer_reg[2][26]/D      0.00  
+    0:00:27   27115.1     34.60    4430.1     177.6 stage1_Buffer_reg[5][27]/D      0.00  
+    0:00:27   27123.7     34.38    4407.5     177.6 stage1_Buffer_reg[5][20]/D      0.00  
+    0:00:27   27131.4     34.30    4378.4     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:28   27137.5     34.21    4352.9     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:28   27150.8     34.07    4318.9     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:28   27156.4     33.68    4273.3     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:28   27156.6     33.34    4241.2     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:28   27166.6     33.17    4223.0     177.6 stage1_Buffer_reg[5][20]/D      0.00  
+    0:00:28   27176.0     32.93    4179.1     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:28   27180.4     32.75    4160.7     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:28   27183.0     32.68    4142.3     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:28   27191.1     32.39    4103.2     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:28   27197.6     32.10    4078.2     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:29   27200.9     31.98    4031.0     177.6 stage1_Buffer_reg[7][22]/D      0.00  
+    0:00:29   27205.1     31.85    4012.4     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:29   27210.7     31.63    3989.9     177.6 stage1_Buffer_reg[7][30]/D      0.00  
+    0:00:29   27235.2     31.27    3925.6     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:29   27240.8     31.01    3890.1     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:29   27247.8     30.87    3861.8     177.6 stage1_Buffer_reg[5][29]/D      0.00  
+    0:00:29   27262.5     30.53    3836.9     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:29   27277.2     30.25    3810.6     177.6 stage1_Buffer_reg[5][31]/D      0.00  
+    0:00:29   27278.6     30.14    3782.9     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:29   27280.0     29.95    3767.4     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:29   27291.0     29.84    3737.7     177.6 stage1_Buffer_reg[5][28]/D      0.00  
+    0:00:29   27301.2     29.59    3704.0     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:30   27305.4     29.43    3696.1     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:30   27312.9     29.26    3654.5     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:30   27325.0     29.18    3645.0     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:30   27330.4     29.04    3630.1     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:30   27334.4     28.87    3616.4     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:30   27334.4     28.70    3606.0     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:30   27338.3     28.58    3547.5     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:30   27344.6     28.49    3539.5     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:30   27349.7     28.30    3523.2     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:30   27351.4     28.10    3493.2     177.6 stage1_Buffer_reg[2][20]/D      0.00  
+    0:00:30   27354.4     28.03    3488.0     177.6 stage1_Buffer_reg[2][24]/D      0.00  
+    0:00:30   27357.7     27.90    3474.1     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:30   27364.0     27.72    3453.6     177.6 stage1_Buffer_reg[0][22]/D      0.00  
+    0:00:30   27367.2     27.54    3427.2     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:30   27369.3     27.50    3421.1     177.6 stage2_Buffer_reg[1][33]/D      0.00  
+    0:00:31   27378.7     27.38    3402.5     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:31   27385.2     27.13    3374.9     177.6 stage2_Buffer_reg[1][27]/D      0.00  
+    0:00:31   27388.0     27.05    3365.6     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:31   27398.3     26.99    3321.1     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:31   27403.6     26.75    3309.9     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:31   27408.8     26.60    3297.1     177.6 stage1_Buffer_reg[1][23]/D      0.00  
+    0:00:31   27422.8     26.35    3270.0     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:31   27430.2     26.20    3204.5     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:31   27431.9     26.08    3176.5     177.6 stage1_Buffer_reg[5][27]/D      0.00  
+    0:00:31   27433.3     26.06    3174.1     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:31   27436.1     25.96    3155.4     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:31   27439.8     25.85    3148.2     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:31   27443.5     25.67    3132.2     177.6 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:31   27445.6     25.61    3122.7     177.6 stage1_Buffer_reg[5][25]/D      0.00  
+    0:00:32   27453.6     25.50    3113.4     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:32   27463.8     25.37    3093.8     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:32   27470.6     25.29    3083.0     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:32   27482.5     24.89    3028.5     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:32   27485.7     24.72    3016.5     177.6 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:32   27489.5     24.49    2999.3     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:32   27490.2     24.37    2983.5     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:32   27492.5     24.24    2968.3     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:32   27496.2     24.08    2944.0     177.6 stage1_Buffer_reg[0][26]/D      0.00  
+    0:00:32   27502.5     23.95    2929.4     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:32   27507.0     23.84    2920.5     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:32   27516.5     23.71    2899.7     177.6 stage1_Buffer_reg[1][23]/D      0.00  
+    0:00:32   27525.6     23.48    2853.3     177.6 stage1_Buffer_reg[2][21]/D      0.00  
+    0:00:32   27529.8     23.34    2840.2     177.6 stage2_Buffer_reg[2][27]/D      0.00  
+    0:00:33   27535.7     23.18    2812.3     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:33   27538.0     23.07    2800.1     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:33   27540.1     22.98    2790.4     177.6 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:33   27543.8     22.83    2768.5     177.6 stage1_Buffer_reg[7][28]/D      0.00  
+    0:00:33   27548.5     22.50    2749.9     177.6 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:33   27551.5     22.48    2743.9     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:33   27554.6     22.31    2721.4     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:33   27556.4     22.21    2700.5     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:33   27556.7     22.15    2696.5     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:33   27560.6     21.99    2677.9     177.6 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:33   27577.0     21.88    2656.5     177.6 stage1_Buffer_reg[3][21]/D      0.00  
+    0:00:33   27581.2     21.69    2649.2     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:33   27586.1     21.62    2633.7     177.6 stage1_Buffer_reg[7][28]/D      0.00  
+    0:00:33   27588.2     21.45    2621.3     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:33   27593.3     21.39    2608.1     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:34   27593.3     21.27    2597.8     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:34   27601.0     21.10    2576.6     177.6 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:34   27606.8     20.93    2546.1     177.6 stage1_Buffer_reg[7][28]/D      0.00  
+    0:00:34   27614.1     20.79    2539.6     177.6 stage1_Buffer_reg[2][20]/D      0.00  
+    0:00:34   27618.0     20.61    2526.9     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:34   27623.9     20.49    2479.6     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:34   27625.3     20.42    2463.2     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:34   27629.2     20.30    2452.3     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:34   27638.1     20.16    2441.3     177.6 stage1_Buffer_reg[8][31]/D      0.00  
+    0:00:34   27638.1     20.16    2441.7     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:34   27637.6     20.08    2437.7     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:34   27644.1     19.92    2419.4     177.6 stage1_Buffer_reg[2][20]/D      0.00  
+    0:00:34   27651.1     19.86    2396.1     177.6 stage1_Buffer_reg[2][20]/D      0.00  
+    0:00:34   27653.9     19.84    2389.2     177.6 stage1_Buffer_reg[3][21]/D      0.00  
+    0:00:34   27660.0     19.75    2383.8     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:35   27664.9     19.67    2376.1     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:35   27666.8     19.59    2370.7     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:35   27668.9     19.47    2348.6     177.6 stage1_Buffer_reg[4][23]/D      0.00  
+    0:00:35   27674.7     19.36    2332.2     177.6 stage1_Buffer_reg[4][23]/D      0.00  
+    0:00:35   27683.6     19.32    2269.9     177.6 stage2_Buffer_reg[2][31]/D      0.00  
+    0:00:35   27685.4     19.22    2258.0     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:35   27687.5     19.05    2246.5     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:35   27691.5     18.76    2224.8     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:35   27700.6     18.68    2217.6     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:35   27702.2     18.61    2211.5     177.6 stage1_Buffer_reg[4][23]/D      0.00  
+    0:00:35   27711.1     18.56    2198.1     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:35   27718.6     18.43    2184.2     177.6 stage2_Buffer_reg[1][27]/D      0.00  
+    0:00:35   27722.8     18.40    2173.7     177.6 stage2_Buffer_reg[1][33]/D      0.00  
+    0:00:35   27724.6     18.34    2167.9     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:36   27730.9     18.27    2168.2     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:36   27734.2     18.14    2144.8     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:36   27737.9     17.96    2123.0     177.6 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:36   27741.0     17.81    2099.4     177.6 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:36   27745.4     17.60    2071.8     177.6 stage1_Buffer_reg[8][26]/D      0.00  
+    0:00:36   27747.7     17.47    2065.8     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:36   27752.6     17.38    2050.6     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:36   27758.0     17.26    2049.1     177.6 stage1_Buffer_reg[2][30]/D      0.00  
+    0:00:36   27763.4     17.13    2036.0     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:36   27769.4     17.06    2029.9     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:36   27772.7     16.93    2003.1     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:36   27775.7     16.80    1969.2     177.6 stage1_Buffer_reg[4][23]/D      0.00  
+    0:00:36   27776.2     16.77    1947.4     177.6 stage1_Buffer_reg[2][23]/D      0.00  
+    0:00:36   27783.9     16.72    1940.8     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:36   27790.2     16.60    1927.0     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:37   27794.4     16.51    1924.0     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:37   27799.5     16.44    1916.2     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:37   27799.0     16.33    1900.3     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:37   27803.0     16.19    1886.2     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:37   27806.3     16.05    1881.1     177.6 stage1_Buffer_reg[4][23]/D      0.00  
+    0:00:37   27806.3     16.01    1876.0     177.6 stage1_Buffer_reg[3][20]/D      0.00  
+    0:00:37   27807.4     15.85    1857.1     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:37   27808.6     15.77    1847.5     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:37   27815.8     15.61    1820.7     177.6 stage1_Buffer_reg[7][27]/D      0.00  
+    0:00:37   27820.3     15.48    1812.9     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:37   27821.2     15.45    1806.0     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:37   27823.5     15.42    1791.6     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:37   27827.0     15.32    1782.7     177.6 stage1_Buffer_reg[8][21]/D      0.00  
+    0:00:37   27827.5     15.29    1779.0     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:37   27827.7     15.15    1759.3     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:37   27829.1     15.08    1750.7     177.6 stage1_Buffer_reg[3][20]/D      0.00  
+    0:00:37   27837.3     14.94    1723.0     177.6 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:38   27844.8     14.81    1708.7     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:38   27850.4     14.71    1696.3     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:38   27854.6     14.66    1691.0     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:38   27861.3     14.51    1680.6     177.6 stage2_Buffer_reg[1][33]/D      0.00  
+    0:00:38   27863.0     14.48    1674.8     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:38   27864.8     14.47    1672.2     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:38   27870.0     14.31    1697.3     177.6 stage1_Buffer_reg[5][25]/D      0.00  
+    0:00:38   27875.6     14.21    1676.2     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:38   27881.4     14.03    1642.1     177.6 stage1_Buffer_reg[1][26]/D      0.00  
+    0:00:38   27884.9     13.86    1622.9     177.6 stage1_Buffer_reg[7][27]/D      0.00  
+    0:00:38   27890.7     13.78    1616.0     177.6 stage1_Buffer_reg[8][31]/D      0.00  
+    0:00:38   27891.0     13.60    1595.8     177.6 stage1_Buffer_reg[1][27]/D      0.00  
+    0:00:38   27894.7     13.50    1582.5     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:38   27895.6     13.44    1573.6     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:38   27897.5     13.34    1565.8     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:38   27901.7     13.26    1558.2     177.6 stage1_Buffer_reg[7][27]/D      0.00  
+    0:00:39   27906.1     13.19    1544.3     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:39   27906.4     13.16    1543.6     177.6 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:39   27907.1     13.13    1542.3     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:39   27907.1     13.10    1541.7     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:39   27908.5     13.09    1539.3     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:39   27915.0     12.97    1511.3     177.6 stage1_Buffer_reg[8][31]/D      0.00  
+    0:00:39   27918.0     12.80    1488.0     177.6 stage1_Buffer_reg[3][26]/D      0.00  
+    0:00:39   27930.1     12.63    1464.2     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:39   27945.8     12.47    1445.3     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:39   27957.4     12.30    1413.1     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:39   27965.8     12.20    1395.7     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:39   27971.4     12.07    1385.0     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:39   27979.4     11.95    1371.5     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:39   27986.1     11.73    1335.8     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:39   27997.6     11.54    1311.8     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:39   27999.9     11.31    1286.8     177.6 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:39   28008.8     11.14    1264.5     177.6 stage1_Buffer_reg[7][26]/D      0.00  
+    0:00:39   28013.9     11.01    1255.8     177.6 Out_OFM_reg[34]/D              0.00  
+    0:00:40   28019.7     10.90    1228.0     177.6 stage1_Buffer_reg[1][27]/D      0.00  
+    0:00:40   28023.2     10.81    1212.8     177.6 stage1_Buffer_reg[6][26]/D      0.00  
+    0:00:40   28032.6     10.75    1188.7     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:40   28037.0     10.58    1172.3     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:40   28043.1     10.31    1147.4     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:40   28050.5     10.01    1114.5     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:40   28052.4      9.91    1099.8     177.6 stage1_Buffer_reg[3][23]/D      0.00  
+    0:00:40   28058.9      9.74    1086.6     177.6 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:40   28065.9      9.63    1069.2     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:40   28072.7      9.48    1039.1     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:40   28075.5      9.27     988.9     177.6 stage2_Buffer_reg[1][33]/D      0.00  
+    0:00:40   28089.0      9.10     978.4     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:40   28095.8      8.88     932.7     177.6 stage1_Buffer_reg[8][31]/D      0.00  
+    0:00:40   28101.1      8.67     917.0     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:40   28104.2      8.46     904.8     177.6 stage1_Buffer_reg[1][22]/D      0.00  
+    0:00:40   28117.7      8.27     881.8     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:40   28124.2      8.05     853.2     177.6 stage1_Buffer_reg[3][24]/D      0.00  
+    0:00:40   28131.9      7.68     818.6     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:41   28136.1      7.57     791.0     177.6 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:41   28137.5      7.45     780.3     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:41   28147.6      7.30     768.4     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:41   28151.1      7.18     750.8     177.6 stage2_Buffer_reg[1][27]/D      0.00  
+    0:00:41   28157.4      7.06     738.7     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:41   28167.2      6.85     702.0     177.6 stage1_Buffer_reg[7][27]/D      0.00  
+    0:00:41   28173.2      6.57     676.1     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:41   28174.4      6.44     659.6     177.6 stage1_Buffer_reg[0][20]/D      0.00  
+    0:00:41   28179.5      6.27     644.8     177.6 Out_OFM_reg[34]/D              0.00  
+    0:00:41   28182.8      6.07     625.3     177.6 stage1_Buffer_reg[2][26]/D      0.00  
+    0:00:41   28183.0      6.00     592.7     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:41   28188.4      5.90     566.2     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:41   28193.1      5.58     546.7     177.6 stage1_Buffer_reg[6][26]/D      0.00  
+    0:00:41   28196.8      5.46     539.4     177.6 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:41   28201.2      5.38     530.2     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:41   28205.2      5.28     517.3     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:41   28212.2      4.91     475.7     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:42   28218.7      4.68     445.6     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:42   28219.2      4.51     428.6     177.6 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:42   28221.0      4.47     422.5     177.6 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:42   28227.6      4.32     402.1     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:42   28229.0      4.21     390.6     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:42   28229.4      4.13     377.5     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:42   28230.1      3.97     367.5     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:42   28233.6      3.88     356.7     177.6 stage1_Buffer_reg[4][26]/D      0.00  
+    0:00:42   28234.8      3.80     349.6     177.6 stage1_Buffer_reg[3][23]/D      0.00  
+    0:00:42   28236.9      3.71     336.2     177.6 stage1_Buffer_reg[3][24]/D      0.00  
+    0:00:42   28239.0      3.63     329.6     177.6 stage1_Buffer_reg[6][20]/D      0.00  
+    0:00:42   28241.3      3.55     320.0     177.6 stage1_Buffer_reg[0][25]/D      0.00  
+    0:00:42   28240.9      3.48     302.2     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:42   28241.3      3.35     287.7     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:42   28242.3      3.23     281.7     177.6 stage1_Buffer_reg[7][25]/D      0.00  
+    0:00:42   28240.6      3.08     270.8     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:42   28241.3      2.94     260.3     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:42   28247.4      2.84     237.2     177.6 Out_OFM_reg[34]/D              0.00  
+    0:00:42   28255.1      2.75     225.7     177.6 stage1_Buffer_reg[7][27]/D      0.00  
+    0:00:43   28260.5      2.58     209.9     177.6 stage1_Buffer_reg[3][24]/D      0.00  
+    0:00:43   28257.2      2.46     190.7     177.6 stage1_Buffer_reg[7][20]/D      0.00  
+    0:00:43   28265.4      2.36     181.1     177.6 stage1_Buffer_reg[1][24]/D      0.00  
+    0:00:43   28268.2      2.33     171.4     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:43   28269.1      2.18     155.2     177.6 stage1_Buffer_reg[4][20]/D      0.00  
+    0:00:43   28270.0      2.11     144.4     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:43   28270.0      2.03     141.1     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:43   28269.1      1.91     131.6     177.6 stage1_Buffer_reg[7][24]/D      0.00  
+    0:00:43   28276.6      1.85     121.0     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:43   28279.4      1.80     114.0     177.6 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:43   28277.5      1.72     106.2     177.6 stage1_Buffer_reg[5][24]/D      0.00  
+    0:00:43   28279.4      1.55      88.4     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:43   28285.0      1.44      81.3     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:43   28285.9      1.42      76.6     177.6 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:43   28279.6      1.33      71.9     177.6 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:43   28279.8      1.26      67.7     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:43   28279.8      1.20      65.7     177.6 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:43   28280.8      1.18      61.7     177.6 stage1_Buffer_reg[3][24]/D      0.00  
+    0:00:43   28280.5      1.12      52.7     177.6 stage1_Buffer_reg[7][25]/D      0.00  
+    0:00:43   28279.8      1.08      48.6     177.6 stage1_Buffer_reg[6][26]/D      0.00  
+    0:00:44   28283.8      0.92      38.3     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:44   28284.5      0.77      29.1     177.6 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:44   28285.9      0.71      27.5     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:44   28286.4      0.67      23.2     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:44   28285.4      0.55      18.5     177.6 stage1_Buffer_reg[1][20]/D      0.00  
+    0:00:44   28286.8      0.49      15.7     177.6 stage1_Buffer_reg[3][24]/D      0.00  
+    0:00:44   28288.9      0.47      13.9     177.6 stage1_Buffer_reg[1][26]/D      0.00  
+    0:00:44   28290.3      0.45      12.1     177.6 stage1_Buffer_reg[7][21]/D      0.00  
+    0:00:44   28290.6      0.37       8.3     177.6 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:44   28292.0      0.24       6.1     177.6 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:44   28294.8      0.21       3.7     177.6 stage1_Buffer_reg[2][28]/D      0.00  
+    0:00:44   28293.8      0.18       2.8     177.6 stage1_Buffer_reg[5][27]/D      0.00  
+    0:00:44   28294.8      0.13       1.7     177.6 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:44   28297.1      0.11       0.9     177.6 stage1_Buffer_reg[6][26]/D      0.00  
+    0:00:44   28295.9      0.06       0.3     177.6 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:44   28297.1      0.02       0.1     177.6 stage1_Buffer_reg[1][26]/D      0.00  
+    0:00:44   28297.1      0.00       0.0     177.6                                0.00  
+    0:00:46   27707.6      0.00       0.0    2456.6                                0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:46   27707.6      0.00       0.0    2456.6                                0.00  
+    0:00:46   27714.4      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:46   27714.4      0.00       0.0       0.0                                0.00  
+    0:00:46   27714.4      0.00       0.0       0.0                                0.00  
+    0:00:47   27420.4      8.65     271.0       0.0                                0.00  
+    0:00:47   27395.9      8.65     263.7       0.0                                0.00  
+    0:00:47   27392.9      8.65     263.7       0.0                                0.00  
+    0:00:47   27392.2      8.65     263.7       0.0                                0.00  
+    0:00:47   27391.5      8.65     263.7       0.0                                0.00  
+    0:00:47   27391.5      8.65     263.7       0.0                                0.00  
+    0:00:48   27404.1      1.94      81.2       0.0 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:48   27405.3      1.30      48.9       0.0 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:48   27412.3      0.99      28.9       0.0 stage1_Buffer_reg[3][22]/D      0.00  
+    0:00:48   27412.0      0.93      26.8       0.0 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:48   27413.2      0.83      19.8       0.0 stage1_Buffer_reg[0][27]/D      0.00  
+    0:00:48   27415.3      0.55      11.3       0.0 stage1_Buffer_reg[8][30]/D      0.00  
+    0:00:48   27419.5      0.42       5.5       0.0 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:48   27423.0      0.35       4.4       0.0 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:48   27427.0      0.27       3.3       0.0 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:48   27427.9      0.18       0.7       0.0 stage1_Buffer_reg[2][22]/D      0.00  
+    0:00:48   27429.1      0.10       0.4       0.0 stage1_Buffer_reg[6][27]/D      0.00  
+    0:00:49   27430.2      0.07       0.1       0.0 stage1_Buffer_reg[5][26]/D      0.00  
+    0:00:49   27429.8      0.00       0.0       0.0                                0.00  
+    0:00:49   26668.1     73.71    5833.7       0.0                                0.00  
+    0:00:50   26501.1     72.47    8503.0       0.0                                0.00  
+    0:00:50   26479.6     72.47    8390.4       0.0                                0.00  
+    0:00:50   26479.1     72.47    8390.4       0.0                                0.00  
+    0:00:50   26479.1     72.47    8390.4       0.0                                0.00  
+    0:00:50   26479.1     72.47    8390.4       0.0                                0.00  
+    0:00:50   26479.1     72.47    8390.4       0.0                                0.00  
+    0:00:50   26479.1     72.47    8390.4       0.0                                0.00  
+    0:00:50   26515.3     11.18     988.4       0.0 stage1_Buffer_reg[0][31]/D      0.00  
+    0:00:50   26543.3      7.37     695.6       0.0 stage1_Buffer_reg[3][28]/D      0.00  
+    0:00:50   26565.2      5.50     479.7       0.0 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:50   26581.1      4.63     384.2       0.0 stage1_Buffer_reg[0][28]/D      0.00  
+    0:00:50   26588.8      3.95     338.5       0.0 stage1_Buffer_reg[8][28]/D      0.00  
+    0:00:51   26588.8      3.94     338.5       0.0 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:51   26592.1      3.71     302.2       0.0 stage1_Buffer_reg[4][24]/D      0.00  
+    0:00:51   26596.0      3.28     277.4       0.0 stage1_Buffer_reg[7][30]/D      0.00  
+    0:00:51   26604.4      2.87     224.4       0.0 stage1_Buffer_reg[8][25]/D      0.00  
+    0:00:51   26607.2      2.64     205.5       0.0 stage1_Buffer_reg[8][28]/D      0.00  
+    0:00:51   26618.6      2.44     189.0       0.0 stage1_Buffer_reg[3][20]/D      0.00  
+    0:00:51   26623.3      2.35     177.2       0.0 stage2_Buffer_reg[1][27]/D      0.00  
+    0:00:51   26628.4      2.12     140.0       0.0 stage1_Buffer_reg[3][27]/D      0.00  
+    0:00:51   26637.5      1.92     121.5       0.0 stage1_Buffer_reg[2][31]/D      0.00  
+    0:00:51   26638.2      1.83     116.3       0.0 stage1_Buffer_reg[2][31]/D      0.00  
+    0:00:51   26639.2      1.77     114.4       0.0 stage1_Buffer_reg[7][21]/D      0.00  
+    0:00:51   26641.7      1.62      98.2       0.0 stage1_Buffer_reg[1][30]/D      0.00  
+    0:00:52   26646.4      1.31      74.0       0.0 stage1_Buffer_reg[2][30]/D      0.00  
+    0:00:52   26648.0      1.19      70.4       0.0 stage1_Buffer_reg[6][22]/D      0.00  
+    0:00:52   26649.7      1.14      62.8       0.0 stage1_Buffer_reg[1][26]/D      0.00  
+    0:00:52   26655.0      1.06      54.1       0.0 stage1_Buffer_reg[7][21]/D      0.00  
+    0:00:52   26656.2      0.91      44.0       0.0 stage1_Buffer_reg[7][21]/D      0.00  
+    0:00:52   26655.7      0.84      37.8       0.0 stage1_Buffer_reg[5][28]/D      0.00  
+    0:00:52   26657.6      0.76      31.5       0.0 stage1_Buffer_reg[1][29]/D      0.00  
+    0:00:52   26663.0      0.69      26.3       0.0 stage1_Buffer_reg[3][20]/D      0.00  
+    0:00:52   26670.4      0.54      15.8       0.0 stage1_Buffer_reg[2][31]/D      0.00  
+    0:00:52   26670.9      0.48      11.9       0.0 stage1_Buffer_reg[2][31]/D      0.00  
+    0:00:52   26670.9      0.40      10.2       0.0 stage1_Buffer_reg[8][22]/D      0.00  
+    0:00:53   26673.7      0.35       7.5       0.0                                0.00  
+    0:00:53   26677.2      0.22       4.0       0.0                                0.00  
+    0:00:53   26678.6      0.21       3.6       0.0                                0.00  
+    0:00:53   26678.1      0.18       2.4       0.0                                0.00  
+    0:00:53   26680.2      0.11       0.6       0.0                                0.00  
+    0:00:53   26685.1      0.05       0.1       0.0 stage1_Buffer_reg[1][26]/D      0.00  
+    0:00:53   26687.7      0.00       0.0       0.0 stage1_Buffer_reg[5][31]/D      0.00  
+    0:00:54   26661.8      0.00       0.0       0.0                                0.00  
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_INVBUF_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SIMPLE_RVT_TT_08302018.db'
+Loading db file '/RAID2/COURSE/dic/dic122/hw3/asap7sc7p5t_SEQ_RVT_TT_08302018.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+#======================================================
+#  Output Reports
+#======================================================
+report_timing            >  Report/$DESIGN\.timimg
+report_area              >  Report/$DESIGN\.area
+report_resource          >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/dic/dic122/hw3/Netlist/Convolution_optimize_v3_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/dic/dic122/hw3/Netlist/Convolution_optimize_v3_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Convolution_optimize_v3
+Version: T-2022.03
+Date   : Thu Nov  9 00:02:29 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_INVBUF_RVT_TT_08302018
+Wire Load Model Mode: top
+
+  Startpoint: IFM_Buffer_reg_8__15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: stage1_Buffer_reg_4__24_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IFM_Buffer_reg_8__15_/CLK (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00       0.00 r
+  IFM_Buffer_reg_8__15_/QN (ASYNC_DFFHx1_ASAP7_75t_R)    56.75      56.75 r
+  mult_168/a[15] (Convolution_optimize_v3_DW_mult_uns_21)
+                                                          0.00      56.75 r
+  mult_168/U1437/Y (HB1xp67_ASAP7_75t_R)                 25.64      82.39 r
+  mult_168/U1436/Y (XOR2xp5_ASAP7_75t_R)                 28.40     110.79 r
+  mult_168/U1549/Y (AND2x4_ASAP7_75t_R)                  28.00     138.79 r
+  mult_168/U1587/Y (NAND2xp5_ASAP7_75t_R)                 9.79     148.58 f
+  mult_168/U1714/Y (NAND2xp5_ASAP7_75t_R)                18.60     167.19 r
+  mult_168/U538/SN (FAx1_ASAP7_75t_R)                    57.76     224.94 f
+  mult_168/U535/CON (FAx1_ASAP7_75t_R)                   36.25     261.19 r
+  mult_168/U526/SN (FAx1_ASAP7_75t_R)                    43.20     304.39 f
+  mult_168/U1810/Y (INVxp67_ASAP7_75t_R)                 13.61     318.00 r
+  mult_168/U1811/Y (INVx1_ASAP7_75t_R)                   10.81     328.81 f
+  mult_168/U524/SN (FAx1_ASAP7_75t_R)                    32.48     361.30 r
+  mult_168/U1705/Y (BUFx2_ASAP7_75t_R)                   24.09     385.39 r
+  mult_168/U1665/Y (NOR2x1_ASAP7_75t_R)                  10.33     395.71 f
+  mult_168/U1945/Y (NOR2xp33_ASAP7_75t_R)                24.82     420.53 r
+  mult_168/U1931/Y (NAND2xp5_ASAP7_75t_R)                15.32     435.86 f
+  mult_168/U1875/Y (BUFx3_ASAP7_75t_R)                   23.46     459.31 f
+  mult_168/U2174/Y (OR2x2_ASAP7_75t_R)                   22.92     482.23 f
+  mult_168/U2173/Y (NOR2x1_ASAP7_75t_R)                  11.49     493.72 r
+  mult_168/U2146/Y (NOR2x1_ASAP7_75t_R)                  10.31     504.02 f
+  mult_168/U2195/Y (XNOR2xp5_ASAP7_75t_R)                19.76     523.78 f
+  mult_168/product[24] (Convolution_optimize_v3_DW_mult_uns_21)
+                                                          0.00     523.78 f
+  U3184/Y (INVxp67_ASAP7_75t_R)                           9.37     533.16 r
+  stage1_Buffer_reg_4__24_/D (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00     533.16 r
+  data arrival time                                                533.16
+
+  clock clk (rise edge)                                 550.00     550.00
+  clock network delay (ideal)                             0.00     550.00
+  stage1_Buffer_reg_4__24_/CLK (ASYNC_DFFHx1_ASAP7_75t_R)
+                                                          0.00     550.00 r
+  library setup time                                    -16.84     533.16
+  data required time                                               533.16
+  --------------------------------------------------------------------------
+  data required time                                               533.16
+  data arrival time                                               -533.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+exit
+
+Memory usage for this session 217 Mbytes.
+Memory usage for this session including child processes 217 Mbytes.
+CPU usage for this session 56 seconds ( 0.02 hours ).
+Elapsed time for this session 61 seconds ( 0.02 hours ).
+
+Thank you...
