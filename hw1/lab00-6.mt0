@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='Q-2020.03-SP2-2 linux64' PARAM_COUNT=0
+.TITLE ''
+ tr               tf               tplh             tphl            
+ tr2              tf2              tplh2            tphl2           
+ temper           alter#          
+  6.765e-11        5.253e-11       -1.446e-09       -4.446e-10      
+  6.922e-11        5.368e-11       -4.388e-10       -1.443e-09      
+   25.0000        1               

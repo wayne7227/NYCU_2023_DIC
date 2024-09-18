@@ -1,0 +1,25 @@
+* "simulator" "HSPICE" 
+* "version" "Q-2020.03-SP2-2 linux64"
+* "format" "HSP"
+* "rundate" "01:21:06 10/13/2023 "
+* "netlist" "lab00-5.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ out = 124.8940n       
++ outt = 699.9999m       
++ vdd = 700.0000m       
++ vss =   0.            
++ x1.in_b = 699.9999m       
++ x2.x = 672.6782m       
++ x3.x = 672.6782m       
++ x4.x = 672.6782m       
++ x5.x = 672.6782m       
++ x1.x_inv1.x = 672.6782m       
++ x1.x_inv2.x = 175.0001m       
+***   END: Saved Operating Point ***                     

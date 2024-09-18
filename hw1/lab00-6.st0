@@ -1,0 +1,53 @@
+****** HSPICE -- Q-2020.03-SP2-2 linux64 (Nov  1 2020) ******
+Input File: lab00-6.sp
+lic:
+lic: FLEXlm: SDK_12.6
+lic: USER:   dic122               HOSTNAME: ee27
+lic: HOSTID: "d85ed3efc383"       PID:      117162
+lic: Using FLEXlm license file:
+lic: 26585@lshc
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 31-mar-2024/2023.03
+lic: 239(in_use)/900(total) FLOATING license(s) on SERVER 26585@lshc
+lic:
+
+ init: begin read circuit files, cpu clock= 3.18E-01
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/ad
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/behave
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/bjt
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/burr_brn
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/comlinear
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/dio
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/fet
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/lin_tech
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/pci
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/signet
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/ti
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/tline
+       option search = /usr/cad/synopsys/hspice/cur/hspice/Q-2020.03-SP2-2/hspice/parts/xilinx
+       option post
+ init: end read circuit files, cpu clock= 3.22E-01 peak memory=     401 mb
+ init: begin check errors, cpu clock= 3.22E-01
+  **warning**  No DC path to ground from node        1:
+ init: end check errors, cpu clock= 3.29E-01 peak memory=     402 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 3.29E-01
+       establish matrix -- done, cpu clock= 3.29E-01 peak memory=     402 mb
+       re-order matrix -- done, cpu clock= 3.29E-01 peak memory=     402 mb
+ init: end setup matrix, cpu clock= 3.39E-01 peak memory=     402 mb
+ dcop: begin dcop, cpu clock= 3.39E-01
+ dcop: end dcop, cpu clock= 3.47E-01 peak memory=     402 mb tot_iter=      15
+ output: lab00-6.mt0
+ sweep: tran tran0    begin, stop_t=  2.10E-08 #sweeps=**** cpu clock= 3.50E-01
+ tran: time= 2.1001E-09 tot_iter=     540 conv_iter=     162 cpu clock= 3.76E-01
+ tran: time= 4.2114E-09 tot_iter=    1010 conv_iter=     299 cpu clock= 3.97E-01
+ tran: time= 6.3072E-09 tot_iter=    1456 conv_iter=     433 cpu clock= 4.17E-01
+ tran: time= 8.4160E-09 tot_iter=    1899 conv_iter=     566 cpu clock= 4.38E-01
+ tran: time= 1.0500E-08 tot_iter=    2347 conv_iter=     703 cpu clock= 4.60E-01
+ tran: time= 1.2601E-08 tot_iter=    2871 conv_iter=     858 cpu clock= 4.86E-01
+ tran: time= 1.4721E-08 tot_iter=    3343 conv_iter=     999 cpu clock= 5.09E-01
+ tran: time= 1.6856E-08 tot_iter=    3808 conv_iter=    1138 cpu clock= 5.34E-01
+ tran: time= 1.8974E-08 tot_iter=    4292 conv_iter=    1286 cpu clock= 5.60E-01
+ tran: time= 2.1000E-08 tot_iter=    4760 conv_iter=    1427 cpu clock= 5.86E-01
+ sweep: tran tran0    end, cpu clock= 5.86E-01 peak memory=     402 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
