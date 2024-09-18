@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/RAID2/COURSE/dic/dic122/hw5/Convolution_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 3073ns)
+
+Information: Total simulation time = 3073.000000 ns
+****************************************
+Report : Time Based Power
+Design : Convolution
+Version: P-2019.03-SP5-1
+Date   : Sat Dec 23 21:28:02 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           5.192e-06 1.222e-06 4.081e-09 6.417e-06 ( 4.30%)  
+register                5.093e-05 2.900e-05 5.249e-08 7.999e-05 (53.59%)  i
+combinational           2.813e-05 3.445e-05 2.743e-07 6.285e-05 (42.11%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 6.468e-05   (43.33%)
+  Cell Internal Power  = 8.425e-05   (56.44%)
+  Cell Leakage Power   = 3.308e-07   ( 0.22%)
+    Intrinsic Leakage  = 3.308e-07
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 1.493e-04  (100.00%)
+
+X Transition Power     = 1.821e-06
+Glitching Power        = 1.134e-06
+
+Peak Power             = 9.593e-04
+Peak Time              =      3048
+
+1
